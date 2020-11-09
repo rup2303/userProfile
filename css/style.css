@@ -1,0 +1,345 @@
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    /* -----------theam colors----------------------- */
+    --text-grey:#3f4954;
+    --mid:#3d5a80;
+
+/* -------------------gradient-color------------------ */
+
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/*---------------- global classess ----------------------*/
+a{
+    text-decoration: none;
+    color: var( --text-grey);
+}
+
+.flex-row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+}
+
+h2{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.5rem;
+}
+
+.container{
+    margin: 0.5vw;
+}
+
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: black;
+    background-color:  rgba(231, 130, 130, 0.2);;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightslategray;
+}
+
+
+
+/*---------------- global classess ----------------------*/
+
+
+/*-------------------navbar---------------------- */
+.nav
+{
+    background:white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+    
+  
+}
+
+.nav .toggle-collapse
+{
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    cursor: pointer;
+    display: none;
+  
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+  
+   
+}
+
+.collapse{
+    height: 20rem;
+}
+
+.nav .nav-items{
+   
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+   background-color:var(--mid)
+}
+.nav .nav-items .nav-link:hover a{
+    color: white;
+ }
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+
+.nav .social i{
+    padding:0.2rem;
+}
+
+.nav .social i:hover{
+    color:whitesmoke;
+}
+
+
+/*-------------------navbar---------------------- */
+
+
+
+
+/*------------------------------- main content */
+
+/* ---------------------------site title */
+main .site-title
+{
+    background:url(../assets/travel/blogger.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    /* text-align: center; */
+    color: black;
+}
+
+main .site-title h1,h2{
+    margin: .3rem;
+}
+  /* -------------------------------blog carousel */
+
+main .blog .blog-post{
+   padding-top: 6rem;
+}
+
+main .blog-post .blog-content{
+  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(235, 8, 8, 0.2);
+   
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+/* ------------------*--------------blog carousel */
+
+.container .site-content {
+    padding-top: 15rem;
+}
+.container .site-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    margin: 5rem 7rem;
+    box-shadow: 0 15px 20px rgba(6, 44, 116, 0.2);
+    border: 2px solid rgb(245, 191, 191);
+}
+
+.container .site-content {
+    padding: 2rem 0;
+}
+
+/* ----------------*-----------------main content */
+
+/* ------------------------------footer------------------------------ */
+
+
+ footer.footer{
+     height: 100%;
+     background: rgba(231, 130, 130, 0.2);
+     position: relative;
+
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+     flex-basis: 0;
+     padding: 0.5rem .6rem;  
+}
+
+footer.footer .container .about-us h2{
+    color: black;
+
+}
+
+footer.footer .Blog div > img{
+    display: inline-block;
+    width: 25%;
+    height: 40%;
+    margin: .3rem .4rem
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+footer.footer .rights h4 a{
+     color: black;
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+footer.footer .move-up span{
+    color: black;
+}
+footer.footer .move-up span:hover{
+    color: white;
+    cursor: pointer;
+} 
+
+
+@media only screen and (max-width: 1130px){
+    footer.footer .container{
+        grid-template-columns: repeat(4,1fr);
+    }
+} 
+
+
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+     
+
+
+} 
+
+@media only screen and (max-width:520px){
+    main .blog{
+        height: 125vh;
+
+        }
+
+        footer.footer .container > div{
+            padding: 1rem 0.9rem !important;
+        }
+
+        footer.footer .container{
+            grid-template-columns: repeat(1,1fr);
+        }
+    
+        footer .rights{
+            padding: 0 1.4rem;
+            text-align: center;
+        }
+
+        nav .toggle-collapse{
+            width: 80% !important;
+        }
+
+    
+
+      
+    }
+     
+
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+
+
+
+
+
+/* ------------------------------footer------------------------------ */

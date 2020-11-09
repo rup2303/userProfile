@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger</title>
+    <!----------- font awesome icons --------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Rich-Text-Editor-jQuery-RichText/src/richtext.min.css">    
+   
+    <!----------- custom style --------------->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/registeration.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./Rich-Text-Editor-jQuery-RichText//src/jquery.richtext.min.js"></script>
+  
+    <script src="../js/main.js"></script>
+
+
+</head>
+<body>
+
+<!--------------------------- navigation ------------------------------->
+<nav class="nav">
+   <div class="nav-menu flex-row">
+       <div class="nav-brand">
+           <a href="#" class="text-gray">Blog It</a>
+       </div>
+       <div class="toggle-collapse searchBar">
+           <div class="toggle-icons">
+               <i class="fas fa-bars"></i>
+           </div>
+       </div>
+
+       <div>
+           <ul class="nav-items">
+               <li class="nav-link">
+                   <a href="index.html">Home</a>
+               </li>
+               <li class="nav-link">
+                <a href="#">Categories</a>
+            </li>
+    
+            <li class="nav-link a">
+                <a href="#" id="mysingUpButton" class="reg">Sign-Up</a>
+            </li>
+            <li class="nav-link">
+                <a href="#" id="mylogButton" class="log">Login</a>
+            </li>
+            <li class="nav-link">
+                <a href="#" id="mylogOutButton">Logout</a>
+            </li>
+            <li class="nav-link">
+                <a href="#" id="createPost" class="btn btn-success createblog"  >Create Blog +</a>
+            </li>
+            <li class="nav-link">
+                <a href="#" class="btn btn-info btn-lg myprofile">
+                  &#xf007;
+                  </a>
+            </li>
+
+            <!-- <li class="nav-link">
+                <div class="searchbar">
+                    <span><i><b>Search Blog's</b></i></span>
+                    <input type="search" name="search" id="searchtitle" placeholder="search on the basis of title" maxlength="50">
+                    <div id="text" class="title-search-result"></div>
+                 </div>
+            </li> -->
+           </ul>
+       </div>
+
+     
+
+   </div>
+
+   
+</nav>
+<!-- Texteditor html -->
+<div id="texteditor" class="texteditor">
+    <div class="input-group">    
+      <select title="category" class="custom-select" id="category"> 
+        <option>Travel</option> 
+        <option>Fashion</option> 
+        <option>Technology</option> 
+        <option>Motivation</option>
+        <option>Education</option>
+        <option>Nature</option>
+        </select>    
+      <input type="text" id="title" class="form-control" placeholder="Enter Title of the Blog Here"/>
+  </div>
+   <input type="text" id="image" class="form-control" placeholder="Enter Image url"/>  
+    <textarea class="content" name="example"></textarea>
+   <button type="button" class="btn btn-large btn-block btn-default" id="post">Post</button>   
+</div>
+<br>
+<br>
+<!--------------*------------- navigation ----------------*------------->
+
+<!------------------------- custom js file --------------------------------->
+    
+    <script src="../js/registeration.js"></script>
+    
+
+
+
+<!-- main section -->
+<main>
+<!----------------------  title --------------------------->
+    <section class="site-title"> 
+        <div class="site-background">
+              <h1 class="searchbar">Blogger</h1>
+              <br>
+              <div class="searchbar">
+                <span><i><b>Search Blog's</b></i></span>
+                <input type="search" name="search" id="searchtitle" placeholder="search on the basis of title" maxlength="50">
+                <div id="text" class="title-search-result"></div>
+             </div>
+              <!-- profile start -->
+            <div class="myprofileDisp">
+             <div class="container " >
+                <div class="fb-profile">
+                  <img
+                    align="left"
+                    class="fb-image-lg"
+                    src="./assets/profile/blogFinal.webp"
+                    alt="Profile image example"
+                    height="250"
+                  />
+                  <img
+                    align="left"
+                    class="fb-image-profile thumbnail"
+                    src="./assets/profile/pngtree-user-icon-png-image_1796659.jpg"
+                    alt="Profile image example"
+                  />
+                  <div class="fb-profile-text">       
+                    <h1 id="userName"></h1>
+                    <p>
+                      The first step in blogging is not writing them but reading them.
+                    </p>
+                  </div>
+                </div>
+              </div>
+             <!-- container for user's posts -->
+            
+              <div class="column-layout"> 
+                <div class="info-column">
+                  
+                  
+                  <p id="sp1" class="details"><i class="fa fa-user-circle"></i>First name:</p><br />
+                 
+                  <p id="sp2" class="details"><i class="fa fa-envelope"></i>Email:</p><br />
+                  <p id="sp3" class="details"><i class="fa fa-user-o"></i>Gender:</p><br />
+               
+              </div>
+              
+           
+              <div class="post-column" id="post-column">
+                <h2>Posts</h2>
+              </div>
+          </div>
+        </div>
+          <!-- profile Ends -->
+
+
+             <div class="mydiv">
+
+             </div>
+             <div class="container">
+                 <div class="registeartion">
+                <form class="form-horizontal reg myReg" role="form" id="registerationForm">
+                    <h2>Registration</h2>
+                    <br>
+                    <div class="form-group hrFrm">
+                        <label for="#name" class="col-sm-3 control-label">Name*</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="name" placeholder="John Kennedy" class="form-control" autofocus>
+                        </div>
+                    </div>
+        
+                    <div class="form-group hrFrm">
+                        <label for="mail" class="col-sm-3 control-label">Email* </label>
+                        <div class="col-sm-9">
+                            <input type="email" id="mymail" placeholder="john@gmail.com" class="form-control" name="email"
+                                required>
+                                <span id="mailCheck"></span>
+                        </div>
+                    </div>
+                    <div class="form-group hrFrm">
+                        <label for="password" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" placeholder="Password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group hrFrm">
+                        <label for="cPassword" class="col-sm-3 control-label">Confirm Password*</label>
+                        <div class="col-sm-9">
+                            <input type="password" id="cPassword" placeholder="Password" class="form-control" required>
+                            <span id="cp"></span>
+                        </div>
+                    </div>
+                    <div class="form-group hrFrm">
+                        <label class="control-label col-sm-3">Gender</label>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender" id="femaleRadio" value="Female">Female
+                                    </label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender" id="maleRadio" value="Male">Male
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <span class="help-block">*Required fields</span>
+                        </div>
+                    </div>
+                    <button type="submit" id="sub" class="btn btn-primary btn-block">Register</button>
+                </form>
+                 </div>
+                <form action="../html/sucess.html" method="post" class="form-horizontal login log myLog" id="loginForm">
+                    <div class="form-group">
+                        <label for="loginMail" class="col-sm-3 control-label">Email* </label>
+                        <div class="col-sm-12">
+                            <input type="email" id="loginMail" placeholder="john@gmail.com" class="form-control" name="email"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-12">
+                            <input type="password" id="loginPassword" placeholder="Password" class="form-control" required>
+                        </div>
+                    </div>
+                       <div class="col-sm-9">
+                           <span id="validLogin"></span>
+                       </div>
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-primary btn-block" value="Login">
+                    </div>
+                    <br>
+                    <div>
+                        
+                        Not Registered? <a id="singUp" class="abc">Create Account</a>
+                        
+                    </div>
+        
+                </form>
+               
+            </div>
+        </div>
+    </section>
+<!----------------*-------- title ------------*----------->
+
+<!------------------------- Blog carousel ----------------------->
+<section>
+     <div class="blog">
+        <div class="container">
+            <div class="owl-carousel owl-theme blog-post">
+                 <div class="blog-content">
+                     <img src="./assets/food/food8.jpg" alt="">
+                        <div class="blog-title">
+                            <h1>Food</h1>
+                            
+                                    <!-- <button class="btn btn-blog"> abc </button> -->
+                        </div>
+                  </div>  
+                <div class="blog-content">
+                        <img src="./assets/art/art1.jpg" alt="">
+                             <div class="blog-title">
+                                 <h1>Art</h1>
+                               
+                                       <!-- <button class="btn btn-blog"> abc </button> -->
+                         </div>
+                  </div>  
+                                <div class="blog-content">
+                                        <img src="./assets/travel/new.jpg" alt="">
+                                        <div class="blog-title">
+                                            <h1>Travel</h1>
+                                           
+                                           <!-- <button class="btn btn-blog"> abc </button> -->
+                                        </div>
+                                    </div>  
+                                    <div class="blog-content">
+                                            <img src="./assets/sports/images2.jpg " alt="">
+                                            <div class="blog-title">
+                                                <h1>Sports</h1>
+                                               
+                                               <!-- <button class="btn btn-blog"> abc </button> -->
+                                            </div>
+                                        </div>  
+                                        <div class="blog-content">
+                                            <img src="./assets/education/edua.jpg" alt="">
+                                            <div class="blog-title">
+                                                <h1>Educational</h1>
+                                               
+                                               <!-- <button class="btn btn-blog"> abc </button> -->
+                                            </div>
+                                        </div>  
+                                        <div class="blog-content">
+                                            <img src="./assets/motivational/download (1).jpg" alt="">
+                                            <div class="blog-title">
+                                                <h1>Motivational</h1>
+                                              
+                                               <!-- <button class="btn btn-blog"> abc </button> -->
+                                            </div>
+                                        </div>    
+                                        <div class="blog-content">
+                                            <img src="./assets/nature/img.jpg" alt="">
+                                            <div class="blog-title">
+                                                <h1>Nature</h1>
+                                               
+                                               <!-- <button class="btn btn-blog"> abc </button> -->
+                                            </div>
+                                        </div>    
+                        </div>
+                    </div>
+                </div>
+</section>
+<!-------------*------------ Blog carousel ------------*----------->
+
+
+
+
+ <!------------------------- Blogs ----------------------->
+<div class="container">
+    <div class="site-content">
+        <div class="carousel slide" id="myCarousel" data-ride="carousel">
+            <div class="carousel-inner" id="c">
+        </div> 
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="sr-only">Previous</span> 
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        </div>  
+    </div>
+    </div>
+  
+ 
+<!-- Optional JavaScript -->
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
+
+<!-------------------------- Blogs ---------------------------->
+
+  
+      <!-------------------------------- footer ------------------------------------->
+      <footer class="footer">
+        <div class="container">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>sbsdbksjbkjsdn</p>
+            </div>
+            <div class="newsletter">
+                <h2>Contact-Us</h2>
+                <p>sbsdbksjbkjsdn</p>
+            </div>
+            <div class="Blog">
+                <h2>Blog Refer</h2>
+                <div class="flex-row">
+                    <img src="./assets/art/art2.jpg" alt="">
+                    <img src="./assets/education/download1.jpg" alt="">
+                    <img src="./assets/food/coffee.jpg" alt="">
+                </div>
+                <div class="flex-row">
+                    <img src="./assets/nature/nature6.jpg" alt="">
+                    <img src="./assets/sports/images3.jpg" alt="">
+                    <img src="./assets/travel/images3.jpg" alt="">
+                </div>
+            </div>
+            <div class="follow">
+                <h2>Follow Us</h2>
+                <div class="social text-graya">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a> 
+                    
+               </div>
+            </div>
+        </div>
+        <br>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright @2020 All rights reserved
+                <a href="www.///home/sunbeam/Desktop/miniproject/index.html">Blog website</a>
+            </h4>
+        </div>
+        <div class="move-up">
+        <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer> 
+
+     <!-- Site footer -->
+
+<!---------------*----------------- footer --------------------*----------------->
+
+</main>
+<!-- main section -->
+
+
+
+<!-- owl-carousel js -->
+<script src="./js/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- owl-carousel js -->
+</body>
+</html>

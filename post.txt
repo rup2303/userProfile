@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./post.css">
+
+</head>
+<body>
+   <div class="post-container" id="postid">
+
+   </div> 
+   <script src="./jquery-3.5.1.js"></script>
+   <script src="./post.js"></script>
+
+</body>
+</html>
+
+$(document).ready(()=>{
+   
+//    alert("hello")
+    $.ajax({
+        url:"http://localhost:3000/Blog?id=1",
+        type:"GET",
+        success:(data)=>{
+            console.log(data);
+            for(var i=0;i<data.length;i++)
+            {
+                $('<img src='+data[i].img+'></img>').appendTo("#postid");
+
+                $('<h1>'+data[i].title+'</h1>').appendTo("#postid");
+                $('<h3> Created At :'+data[i].date+'</h3>').appendTo("#postid");
+                $('<h3> Category :'+data[i].category+'</h3>').appendTo("#postid");
+                $('<h3> Description :'+data[i].description+'</h3>').appendTo("#postid");
+
+            }
+        }
+    })
+})
+
+
+.post-container{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    color: lightcoral;
+    
+}
+
+
+  "Blog": [
+    {
+      "id": "1",
+      "title": "My First Blog",
+      "category": "motivation",
+      "description": "feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated feeling so motivated",
+      "date": "1/1/1001",
+      "img":"https://wallpapershome.com/images/pages/ico_h/17819.jpg"
+    },
+

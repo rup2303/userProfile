@@ -1,0 +1,262 @@
+@import '../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.css';
+
+/* body {
+    background: url('https://www.strikingly.com/content/static/01860dce6859ba49fd670be737ab09c9/6f021/2019-12-13-background-image-for-website.jpg') fixed;
+   //background-size: cover;
+} */
+
+
+.userProfile{
+ 
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  float: right;
+}
+.myReg{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: -180px;
+
+}
+ .myLog{
+    display: none;
+    /* justify-content: center; */
+    margin-top: -180px;
+
+    /* text-align: start; */
+}
+
+/* .mycont{
+    overflow: hidden;
+} */
+.mydiv{
+    background-color: white;
+    text-align: center;
+    margin: 2em;
+
+
+}
+.createblog{
+   display: none;
+   justify-self: end;
+}
+#texteditor{
+    display: none;    
+ }
+form {
+   max-width: 550px;
+   padding: 15px;
+   margin: 0 auto;
+   border-radius: 0.3em;
+   background-color: grey;
+   align-self: center;
+   margin-top: 120px;
+   opacity: 0.8;
+ font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+h2{
+    text-align: center;
+}
+
+/* for inline input box */
+
+.hrFrm{
+    display: flex;
+}
+
+
+.myprofileDisp{
+    display: none;
+    margin-top: -180px;
+    /* background-color: grey; */
+    opacity: 0.9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* .blog{
+    background-color: yellow;
+    width: 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(70, 28, 28);
+}
+label{
+    text-align: left;
+} */
+
+ @media (max-width:576px){
+     .hrFrm{
+         flex-direction: column;
+     }
+}
+
+
+
+
+/* Profile css */
+
+h1{
+    font-weight: bold;
+    font-family:'Open Sans', sans-serif ;
+  }
+  .fb-profile img.fb-image-lg{
+      z-index: 0;
+      width: 100%;  
+      margin-bottom: 10px;
+      height: 300px;
+      
+  }
+  
+  .fb-image-profile
+  {
+      margin: -90px 10px 0px 50px;
+      z-index: 9;
+      width: 20%; 
+  }
+  
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200italic);
+  body {
+    background:linen;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    
+  }
+  
+  .post {
+    max-width: 800px;
+    margin:10px auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .quote-card {
+    background:lightgray;
+    color: #222222;
+    padding: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+  }
+  .quote-card p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 80%;
+  }
+  
+  .quote-card:before {
+    font-family: Georgia, serif;
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 5em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+  }
+  .quote-card:after {
+    font-family: Georgia, serif;
+    content: "”";
+    position: absolute;
+    bottom: -110px;
+    line-height: 100px;
+    right: -32px;
+    font-size: 25em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+  }
+  
+  
+  
+  
+  .column-layout{
+      /* max-width: 1300px; */
+      background-color:whitesmoke;
+      margin: 40px auto 0 auto;
+      line-height: 1.65;
+      padding: 20px 50px;
+      display: flex;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+      font-family: sans-serif;
+  }
+  .info-column{
+  float: left;
+  flex: 1;
+  order: 1;
+  padding: 20px;
+  font-weight:bold;
+  width: 30%;
+  
+  }
+  
+  .post-column{
+    float: left;
+  flex: 2;
+  order: 2;
+  width: 70%;
+  }
+  
+  @media (max-width:768px)
+  {
+      
+  .fb-profile-text>h1{
+      font-weight: 700;
+      font-size:16px;
+  }
+  
+  .fb-image-profile
+  {
+      margin: -45px 10px 0px 25px;
+      z-index: 9;
+      width: 20%; 
+  }
+  }
+  @media (max-width: 640px) {
+    .quote-card:after {
+      font-size: 10em;
+      right: -25px;
+    }
+  }
+  
+  @media only screen and(max-width:1130px)
+  {
+  .post-column,.info-column{
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+  @media only screen and(max-width:750px)
+  {
+   
+    .post-column,
+    
+    .info-column{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  @media only screen and(max-width:520px)
+  {
+   div.column-layout.post-column,div.column-layout.info-column{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .post-column,.info-column{
+      width:100%;
+    }
+  }
