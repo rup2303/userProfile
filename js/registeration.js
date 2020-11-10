@@ -263,11 +263,13 @@ $("document").ready(() => {
           $(".column-layout").hide();
           $(".searchbar").hide();
           $(".myprofileDisp").show();
+          document.getElementById("nameOfUser").innerHTML=sessionName.name;
+          document.getElementById("emailOfUser").innerHTML=sessionName.email;
           document.getElementById("showName").placeholder =sessionName.name;
           document.getElementById("showEmail").placeholder =sessionName.email ;
           document.getElementById("showGender").placeholder =sessionName.gender ;
-          
-          $(".editP").click(()=>{
+
+          // $(".editP").click(()=>{})
 
 
         })
