@@ -105,7 +105,10 @@ label{
 h1{
     font-weight: bold;
     font-family:'Open Sans', sans-serif ;
+    /* font-size: 3rem; */
   }
+
+  
   .fb-profile img.fb-image-lg{
       z-index: 0;
       width: 100%;  
