@@ -258,10 +258,10 @@ $("document").ready(() => {
          //update users profile
         $(".editP").click(()=>{
           alert("Inside update");
-
+       
           $(".editMyProfile").show();
           $(".column-layout").hide();
-          $(".searchbar").hide();
+          $(".site-title").hide();
           $(".myprofileDisp").show();
           document.getElementById("nameOfUser").innerHTML=sessionName.name;
           document.getElementById("emailOfUser").innerHTML=sessionName.email;
@@ -269,13 +269,34 @@ $("document").ready(() => {
           document.getElementById("showEmail").placeholder =sessionName.email ;
           document.getElementById("showGender").placeholder =sessionName.gender ;
 
-          // $(".editP").click(()=>{})
+          $("#saveInfo").click(function(){
+           var newname= $("#showName").val();
+            alert("Inside save");
+            alert(newname);
+            alert(value.id);
+            var url1="http://localhost:3000/profile/"+ value.id;
+            $.ajax({
+              url:url1 ,
+              method: "PATCH",
+              data:{
+                "name":newname
+              },
+              success: function (x) {
+              //  a.preventDefault();
+                alert("User information updated!!")
+              },
+              error: function (error) {
+                alert(error);
+              },
+            });//
+          
+           })
+  
 
 
         })
 
-
-
+      
 
 
 
